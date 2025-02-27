@@ -20,7 +20,7 @@
 #   url:  ''                  # Fill with your Mastodon account page, rel="me" will be applied for verification
 #
 - type: linkedin
-  icon: 'fa-brands fa-linkedin'   # icons powered by <https://fontawesome.com/>
+  icon: 'fab fa-linkedin'   # icons powered by <https://fontawesome.com/>
   url:  'www.linkedin.com/in/petteri-heino-b984b724'                  # Fill with your Linkedin homepage
 #
 # - type: stack-overflow
