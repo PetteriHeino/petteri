@@ -10,18 +10,18 @@ Tällä sivulla aktiiviset sertifiointini. MS kumppanuuden kannalta merkittävä
 # Aktiiviset Microsoft sertifikaatit
 
 ## Vuonna 2025 merkitykselliset sertifikaatit
-Microsoft Certified: Windows Server Hybrid Administrator Associate..
-Microsoft Certified: Azure Administrator Associate..
-Microsoft Certified: Azure Fundamentals..
+Microsoft Certified: Windows Server Hybrid Administrator Associate<br>
+Microsoft Certified: Azure Administrator Associate<br>
+Microsoft Certified: Azure Fundamentals<br>
 
 ## Muut voimassa olevat sertifikaatit
-MCSE: Productivity Solutions Expert..
-Microsoft® Certified Solutions Associate: Office 365..
-Microsoft® Certified Solutions Expert: Productivity Charter Member..
-Microsoft® Certified Solutions Expert: Messaging..
-Microsoft Specialist: Windows 7, Configuring..
-MCSA: Windows Server 2012..
-Microsoft Certified Professional..
-Microsoft® Certified IT Professional: Enterprise Messaging Administrator on Exchange 2010..
-Microsoft® Certified Technology Specialist: Microsoft Exchange Server 2010, Configuration..
-Microsoft® Certified Technology Specialist: Windows Server 2008 Active Directory, Configuration..
+MCSE: Productivity Solutions Expert<br>
+Microsoft® Certified Solutions Associate: Office 365<br>
+Microsoft® Certified Solutions Expert: Productivity Charter Member<br>
+Microsoft® Certified Solutions Expert: Messaging<br>
+Microsoft Specialist: Windows 7, Configuring<br>
+MCSA: Windows Server 2012<br>
+Microsoft Certified Professional<br>
+Microsoft® Certified IT Professional: Enterprise Messaging Administrator on Exchange 2010<br>
+Microsoft® Certified Technology Specialist: Microsoft Exchange Server 2010, Configuration<br>
+Microsoft® Certified Technology Specialist: Windows Server 2008 Active Directory, Configuration<br>
