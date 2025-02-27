@@ -1,13 +1,13 @@
 ---
 # the default layout is 'page'
 icon: fas fa-info-circle
-order: 5
+order: 6
 ---
 
 # Sivuston syntymä
 Tämä on yksityiselämään ja työelämään keskittyvä kotisivu ja blogi. 
 
-Tämä sivu syntyi lähinnä VS Code ja Github harjoitustyönä. Harrastan DJ toimintaa tein DJ persoonalleni kotisivu/blogin hakiessani tuntumaa VS Coden ja GitHubin käyttöön.
+Tämä sivu syntyi lähinnä VS Code ja Github harjoitustyönä. Harrastan DJ toimintaa ja tein DJ persoonalleni kotisivu/blogin hakiessani tuntumaa VS Coden ja GitHubin käyttöön.
 
 Siinä samalla testaillessa tein myös toisen sivuston mitä käytin hyväkseni ongelmanselvityksessä. Tuumasin, että kun tällainen kerran tuli pystytettyä, niin voisin tehdä siitä Petteri Heino kotisivun, mistä CV ja sertifiointi tiedot ovat näppärästi luettavissa tarvittaessa.
 
