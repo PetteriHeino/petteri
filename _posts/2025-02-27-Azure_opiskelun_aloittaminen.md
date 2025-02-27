@@ -2,7 +2,7 @@
 title: Azure opiskelun aloittaminen ja sertifiointien merkitys työmarkkinoilla
 description: >-
  Tämän on tarkoitus olla blogi-sarjan ei-tekninen aloitus ja jatkan sarjaa blogi postauksina harjoituksista Azure opiskelujen edetessä. Sarjan focus on tarkoitus olla pääasiassa Infrastructure As Codessa.
-author: Petteri
+authors: Petteri
 date: 2025-02-22 21:50:00 +0200
 categories: [Sertifiointi, Opiskelu]
 tags: [Azure, Microsoft]
