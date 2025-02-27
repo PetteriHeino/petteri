@@ -6,7 +6,7 @@
 #   url: {homepage_of_author}
 # -------------------------------------
 
-petteri:
+{author_id}:
   name: "Petteri Heino"
-  linkedin: "https://www.linkedin.com/in/petteri/"
+  linkedin: "https://www.linkedin.com/in/petteri-heino-b984b724"
   avatar: "/assets/img/avatar.jpg"
