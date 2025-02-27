@@ -3,7 +3,9 @@
 icon: fas fa-info-circle
 order: 4
 ---
-Tällä sivulla aktiiviset sertifiointini. MS kumppanuuden kannalta merkittävät sertifioinnit tällä hetkellä ovat vain sertifioinnit jotka olen otsikoinut "vuonna 2025 merkitykselliset sertifikaatit". Koko sertifiointihistoriani on luettavissa minun MS transcriptistä <a href="https://learn.microsoft.com/en-us/users/petteriheino-5912/transcript/drm5blk2yp099gv" target="_blank" rel="noopener noreferrer">MS transcriptistä</a>
+Tältä sivulta voit lukea aktiiviset sertifiointini. 
+
+MS kumppanuuden kannalta merkittävät sertifioinnit tällä hetkellä ovat vain sertifioinnit jotka olen otsikoinut "vuonna 2025 merkitykselliset sertifikaatit". Koko sertifiointihistoriani on luettavissa minun MS transcriptistä <a href="https://learn.microsoft.com/en-us/users/petteriheino-5912/transcript/drm5blk2yp099gv" target="_blank" rel="noopener noreferrer">MS transcriptistä</a>
  
 
 
