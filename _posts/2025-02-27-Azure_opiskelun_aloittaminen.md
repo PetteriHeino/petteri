@@ -66,7 +66,7 @@ Näihin alueisiin tällä hetkellä laskettavat sertifioinnit voi tarkistaa Micr
 
 Tässä kuvakaappaus PDFstä:
 
-![CertificationPoster](/assets/media/2025-02-27-azure_opiskelu/certificationposter.png)
+![CertificationPoster](/certificationposter.png)
 
 Kuvaa katsellessa voi vaan hymyillä ajatusta siitä, että mitä henkilö tarkoittaa sillä jos sanoo osaavansa Azurea?
 
