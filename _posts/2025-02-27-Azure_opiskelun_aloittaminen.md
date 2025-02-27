@@ -2,15 +2,13 @@
 title: Azure opiskelun aloittaminen ja sertifiointien merkitys työmarkkinoilla
 description: >-
  Tämän on tarkoitus olla blogi-sarjan ei-tekninen aloitus ja jatkan sarjaa blogi postauksina harjoituksista Azure opiskelujen edetessä. Sarjan focus on tarkoitus olla pääasiassa Infrastructure As Codessa.
-author: Petteri
+author: "Petteri"
 date: 2025-02-22 21:50:00 +0200
 categories: [Sertifiointi, Opiskelu]
 tags: [Azure, Microsoft]
 pin: false
 media_subpath: '/assets/media/2025-02-27-azure_opiskelu'
 ---
-
-Azure-osaamisen merkitys ja sertifiointipolku IT-infraosaaja konkareille
 
 # Johdanto
 
@@ -22,7 +20,9 @@ Maailman talous kyntää ja se näkyy yrityksien jatkuvina YT-neuvottelu kierrok
 
 Pilveistymisen alkaessa en pitänyt huolta siitä, että osaamiseni kehittyy sitä mukaa kuin maailma muuttuu alalla. Työtä oli yllin kyllin on-prem projekteissa, Exchange Hybrid rakentamista ja pilvisiirtymiä yms... Kunnes tultiin siihen vaiheeseen, että nämä hommat vähentyivät merkittävästi ja yhtäkkiä uutta opittavaa asiaa oli valtavat määrät.
 
-Niinpä tässä kirjoituksessa keskityn ruotimaan alalla pidempään työskennelleen näkökulmasta tilannetta missä aloittelee vasta nyt Azuren opiskelua, miten tarttua härkää sarvista ja miksi? Ja mitä Azure osaaminen ylipäätään on? Se kun ei oikeasti kerro mitään jos sanoo osaavansa Azurea.
+Niinpä tässä kirjoituksessa keskityn ruotimaan alalla pidempään työskennelleen näkökulmasta tilannetta missä aloittelee vasta nyt Azuren opiskelua, miten tarttua härkää sarvista ja miksi? Ja mitä Azure osaaminen ylipäätään on? Se kun ei oikeasti kerro mitään jos sanoo osaavansa Azurea. 
+
+Ajatus tämän tekstin kirjoitukseen tuli omasta tilanteestani. Ajattelin, että mahdollisesti työelämässä on asiantuntijoita, joilla on samanlaisia asenteita Azuren opiskeluun kuin minulla oli aikaisemmin ja tässä koitan antaa ajatuksia näiden asenteiden muuttamiseksi.
 
 Tämä kirjoitus on tarkoitus olla blogi-sarjan ei-tekninen aloitus ja jatkan sarjaa blogi-postauksina hands-on harjoituksista Azure opiskelujen edetessä. Sarjan focus on tarkoitus olla pääasiassa Infrastructure As Codessa.
 
@@ -53,18 +53,20 @@ Työnhakijana sertifioinnit auttavat näkymään työnhakijamassasta ja työnant
 Aikaisemmin Microsoftin kumppaniohjelmassa oli käytössä Gold ja Silver -tasot, joissa yritykset ansaitsivat tunnustettuja kompetensseja suorittamalla tiettyjä sertifiointeja ja täyttämällä osaamisvaatimuksia. Tämä on nyt historiaa, ja tilalle on tullut Cloud Partner Program, jossa yritykset voivat saavuttaa Solutions Partner -statuksen tietyillä osa-alueilla.
 
 Uudessa mallissa yrityksille kertyy osaamispisteitä kolmesta eri kategoriasta:
-    1. Performance (Suorituskyky) – Mittaa uusien asiakkuuksien ja käytössä olevien palveluiden määrää.
-    2. Skilling (Osaaminen) – Yrityksessä työskentelevien sertifioitujen asiantuntijoiden määrä ja heidän suorittamansa sertifikaatit.
-    3. Customer Success (Asiakashyöty) – Mittaa asiakasympäristöjen käyttöasteen ja edistyksen.
+
+1. Performance (Suorituskyky) – Mittaa uusien asiakkuuksien ja käytössä olevien palveluiden määrää.
+2. Skilling (Osaaminen) – Yrityksessä työskentelevien sertifioitujen asiantuntijoiden määrä ja heidän suorittamansa sertifikaatit.
+3. Customer Success (Asiakashyöty) – Mittaa asiakasympäristöjen käyttöasteen ja edistyksen.
 
 Yritykset tarvitsevat Solutions Partner Designation -tunnustuksia, jotka saavutetaan keräämällä riittävästi osaamispisteitä eri alueilla, kuten Infrastructure, Data & AI, Security, Business Applications, Digital & App Innovation ja Modern Work. Tämä tarkoittaa sitä, että työnantajat arvostavat asiantuntijoita, jotka suorittavat sertifiointeja, sillä se auttaa heidän yritystään saavuttamaan arvokkaamman kumppanistatuksen Microsoftin ekosysteemissä.
 
 Näihin alueisiin tällä hetkellä laskettavat sertifioinnit voi tarkistaa Microsoftin Certification Posterista helpoiten (https://arch-center.azureedge.net/Credentials/Certification-Poster_en-us.pdF). Julisteen sertifikaatti laatikot toimivat myös linkkeinä sertifioinnin omalle nettisivulle, mistä pääsee 
-    - lueskelemaan mitä taitoja kyseisessä sertifioinnissa testataan
-    - Varaamaan testiaikoja
-    - Opiskelemaan sertifioinnin osa-alueita ilmaiseen Learn Training palveluun
+    
+- lueskelemaan mitä taitoja kyseisessä sertifioinnissa testataan
+- Varaamaan testiaikoja
+- Opiskelemaan sertifioinnin osa-alueita ilmaiseen Learn Training palveluun
 
-Tässä kuvakaappaus PDFstä:
+Tässä kuvakaappaus PDFstä (klikkaa kuvaa, niin saat sen suuremmaksi):
 
 ![CertificationPoster](/certificationposter.png)
 
@@ -78,16 +80,16 @@ Miksi opiskelen Azurea vasta nyt, kun on kova paine saada taottua osaamista kall
 
 Siihen minulla oli oikeastaan kaksi keskeistä syytä joista ainakin pari syytä on tuttuja suurimmalle osalle alalla työskenteleville:
 
-    - Ajankäyttö
-    - Jaksaminen
-    - Ennakkoluulot
+* Ajankäyttö
+* Jaksaminen
+* Ennakkoluulot
 
 Ajankäyttö ja jaksaminen oikeastaan liittyvät hyvin läheisesti toisiinsa. IT asiantuntija viettää ensin työpäivän näyttöpäätteen ääressä ja sitten pitäisi jaksaa tuijottaa näyttöä lisää opiskelujen merkeissä. Lisäksi kun asiantuntija on kiinni työläässä projektissa tai aktiivisia projekteja on käynnissä samaan aikaan useampi, niin työpäivät helposti venähtävät paljon kahdeksan tuntia pidemmiksi. Siihen päälle vielä yksityiselämän ajankäyttö, niin saa olla mestari suunnittelemaan ajankäyttöä niin, että sinne mahtuisi mukaan myös opiskelua. Aika usein asiantuntijan pitää hyväksyä se fakta, että työ opettaa sen minkä opettaa.
 
 Minun kohdalla ennakkoluulot tarkoittivat kahta seikkaa:
 
-    - Kuvittelin, että Azurea on vaikea opiskella, koska opiskelu tapahtuu maksullisella alustalla. Olen ollut liian pitkää siinä kankeassa "mindsetissä" että opiskelu ei saa maksaa itselle juuri mitään.
-    - Kuvittelin myös aina, että pilvipalveluiden päälle rakentaminen on loppujen lopuksi paljon helpompaa kuin on-prem tekeminen ja asiat on pitkälti samoja erilailla toteutettuna, niin eipä se mikään homma ottaa haltuun kunhan saa vaan aikaiseksi aloittaa opinnot.
+- Kuvittelin, että Azurea on vaikea opiskella, koska opiskelu tapahtuu maksullisella alustalla. Olen ollut liian pitkää siinä kankeassa "mindsetissä" että opiskelu ei saa maksaa itselle juuri mitään.
+- Kuvittelin myös aina, että pilvipalveluiden päälle rakentaminen on loppujen lopuksi paljon helpompaa kuin on-prem tekeminen ja asiat on pitkälti samoja erilailla toteutettuna, niin eipä se mikään homma ottaa haltuun kunhan saa vaan aikaiseksi aloittaa opinnot.
 
 Nyt kun olen opiskelut aloittanut ja pari sertifiointia suorittanut tuosta Microsoftin sertifiointikartasta, niin voin vain todeta että kummatkin näistä ennakkoluuloista oli vääriä. 
 
@@ -116,8 +118,9 @@ Seuraavaksi olisi tarkoitus aloittaa Azure Network Engineer opinnot. Voi olla, e
 Nyt kun kompetenssi ajattelua ei enää ole MS kumppanuus tasoissa ja jos haluaa ajatella että suoritetuilla sertifioinneilla haluaa tehdä itsensä kiinnostavaksi kohteeksi rekryissä tai tuottaa arvoa yritykselle muutenkin kuin pelkällä työn teolla, niin kannattaisi varmaan ajatella, että sertifiointeja olisi usealta certification posteriin määritellyillä osa-aluella. Vähintään kahdesta eri laatikosta.
 
 Esimerkiksi infraosaajalle suositeltavia sertifiointikombinaatioita voisi olla:
-    - Azure Administrator (AZ-104) → Azure Solutions Architect (AZ-305) → Azure Security Engineer (AZ-500)
-    - Azure Administrator (AZ-104) → Azure Network Engineer (AZ-700) → Azure Security Engineer (AZ-500)
+
+- Azure Administrator (AZ-104) → Azure Solutions Architect (AZ-305) → Azure Security Engineer (AZ-500)
+- Azure Administrator (AZ-104) → Azure Network Engineer (AZ-700) → Azure Security Engineer (AZ-500)
 
 Jos haluaa erottua työmarkkinoilla entistä enemmän, voi harkita myös DevOps-, Data- tai Security-haaran sertifiointeja, kuten Azure DevOps Engineer (AZ-400) tai Security-haaran sertifikaatit (SC-200, SC-300, SC-100).
 
@@ -125,23 +128,23 @@ Itsellä ei data alueeseen ole tällä hetkellä oikein intoa tarttua, koska sie
 
 Miten aloittaa Azure-opiskelu tehokkaasti?
 
-    1. Järjestä ajankäyttö
-        - Ajankäytön järjestäminen työelämän ohessa on priorisointipäätös. Kuinka paljon on valmis uhraamaan omaa vapaa-aikaa oman työelämän osaamisen ylläpitoon?
-        - Miten järjestää aika opiskeluun, niin että jaksaa opiskella? Ei sen loppujen lopuksi tarvitse olla paljon aikaa per viikko, jos vain opiskelee säännöllisesti. Arkena ei välttämättä kannata asialle uhrata paljon aikaa, mutta jos vaikka ottaisi tavaksi iltasella lukea lyhyen aikaa MS Learniä? Ei niin paljon, että ei kerkeä vähän katsomaan telkkariakin yms.. Viikonloppuaamuisin ennen kuin rientää viikonlopun muihin askareisiin, niin opiskelisi pari tuntia lauantaina ja sunnuntaina? Tekisi siinä vähän hands on opiskelua Azuressa etc…?
-        - Kun nämä asiat kondiksessa, niin sitten yrittää vaan rohkeasti työelämässä päästä tekemään asioita joita kotona parhaillaan opiskelee.
+1. Järjestä ajankäyttö
+    - Ajankäytön järjestäminen työelämän ohessa on priorisointipäätös. Kuinka paljon on valmis uhraamaan omaa vapaa-aikaa oman työelämän osaamisen ylläpitoon?
+    - Miten järjestää aika opiskeluun, niin että jaksaa opiskella? Ei sen loppujen lopuksi tarvitse olla paljon aikaa per viikko, jos vain opiskelee säännöllisesti. Arkena ei välttämättä kannata asialle uhrata paljon aikaa, mutta jos vaikka ottaisi tavaksi iltasella lukea lyhyen aikaa MS Learniä? Ei niin paljon, että ei kerkeä vähän katsomaan telkkariakin yms.. Viikonloppuaamuisin ennen kuin rientää viikonlopun muihin askareisiin, niin opiskelisi pari tuntia lauantaina ja sunnuntaina? Tekisi siinä vähän hands on opiskelua Azuressa etc…?
+    - Kun nämä asiat kondiksessa, niin sitten yrittää vaan rohkeasti työelämässä päästä tekemään asioita joita kotona parhaillaan opiskelee.
           
-    2. Asenne kohdilleen
-        - Vaikka osa opiskelusta voi olla maksullista, niin hinnat on varsin maltillisia ja mitättömiä kun pitää huolen, että Azure resurssit on poistettu välittömästi kun lopettaa hands on opiskelun.
+2. Asenne kohdilleen
+    - Vaikka osa opiskelusta voi olla maksullista, niin hinnat on varsin maltillisia ja mitättömiä kun pitää huolen, että Azure resurssit on poistettu välittömästi kun lopettaa hands on opiskelun.
         
-    3. Tekniset valmistelut ennen opiskelun aloittamista
-        - Luo oma Azure-tili, mikä on täysin maksuton kun palvelussa ei ole asennettuna resursseja joista tulee kuluja.
-        - Ota käyttöön GitHub ja asenna VS Code kehitysympäristöksi. Jos olet on-prem asiantuntija, niin luultavasti et ole käyttänyt muuta editoria kuin korkeintaan Powershell ISEä. VS Code on täysin suvereeni editorina verrattuna ISEen ja sen käytön opiskelu kannattaa aloittaa heti alusta lähtien kun alkaa opiskelemaan Azurea. VS Coden lisäksi haluat oppia käyttämään Githubia ja opetella heti alkuun miten datan commitointi ja push omalta koneelta Githubin repositoryyn tapahtuu.
-        - Hyödynnä GitHub Copilotin ilmaista versiota opiskelun tukena. VS Codeen integroitu AI on opiskelun ja editorissa työskentelyn kannalta niin ehdoton apu, että sitä välillä miettii, että miten kukaan on oppinut mitään ennen AI työkaluja.
+3. Tekniset valmistelut ennen opiskelun aloittamista
+    - Luo oma Azure-tili, mikä on täysin maksuton kun palvelussa ei ole asennettuna resursseja joista tulee kuluja.
+    - Ota käyttöön GitHub ja asenna VS Code kehitysympäristöksi. Jos olet on-prem asiantuntija, niin luultavasti et ole käyttänyt muuta editoria kuin korkeintaan Powershell ISEä. VS Code on täysin suvereeni editorina verrattuna ISEen ja sen käytön opiskelu kannattaa aloittaa heti alusta lähtien kun alkaa opiskelemaan Azurea. VS Coden lisäksi haluat oppia käyttämään Githubia ja opetella heti alkuun miten datan commitointi ja push omalta koneelta Githubin repositoryyn tapahtuu.
+    - Hyödynnä GitHub Copilotin ilmaista versiota opiskelun tukena. VS Codeen integroitu AI on opiskelun ja editorissa työskentelyn kannalta niin ehdoton apu, että sitä välillä miettii, että miten kukaan on oppinut mitään ennen AI työkaluja.
         
-    4. Hyödynnä tarjolla olevia opiskelumateriaaleja
-        - Microsoft Learn ( https://learn.microsoft.com/en-us/training/) tarjoaa palveludokumentaatioiden lisäksi ilmaisia kursseja ja opintopolkuja omatoimiseen opiskeluun sertifiointitestiin valmistelevassa opiskelussa.
-        - Azure-dokumentaatio ( https://learn.microsoft.com/en-us/azure/) syventää ymmärrystäsi ja auttaa testeihin valmistautumisessa.
-        - Microsoft Partner University on Microsoftin koulutusalusta, joka on suunnattu Microsoftin kumppaneille. Se tarjoaa kattavasti oppimateriaalia, joka liittyy Microsoftin teknologioihin, myyntiin, asiakasmenestykseen ja kumppanuusohjelmiin. Pitäisi löytyä myös teknistä asiantuntijakoulutusta. En tiedä tästä oikeastaan paljoakaan, huomasin tätä blogikirjoitusta kirjoittaessa että tällainenkin on näköjään olemassa.
-        - Harjoituskokeet (esim. MeasureUp) auttavat hahmottamaan, milloin olet valmis varsinaiseen testiin. Kun hankit vouchereita sertifiointi testiin, niin osta MeasureUp harjoitustesti kylkeen, mikä ei lisää hintaa montaa kymppiä ja voit harjoitustestillä kartoittaa valmiuttasi testiin ja huomaat mikäli jokin osa-alue on vielä vähän heikosti hallinnassa.
+4. Hyödynnä tarjolla olevia opiskelumateriaaleja
+    - Microsoft Learn ( https://learn.microsoft.com/en-us/training/) tarjoaa palveludokumentaatioiden lisäksi ilmaisia kursseja ja opintopolkuja omatoimiseen opiskeluun sertifiointitestiin valmistelevassa opiskelussa.
+    - Azure-dokumentaatio ( https://learn.microsoft.com/en-us/azure/) syventää ymmärrystäsi ja auttaa testeihin valmistautumisessa.
+    - Microsoft Partner University on Microsoftin koulutusalusta, joka on suunnattu Microsoftin kumppaneille. Se tarjoaa kattavasti oppimateriaalia, joka liittyy Microsoftin teknologioihin, myyntiin, asiakasmenestykseen ja kumppanuusohjelmiin. Pitäisi löytyä myös teknistä asiantuntijakoulutusta. En tiedä tästä oikeastaan paljoakaan, huomasin tätä blogikirjoitusta kirjoittaessa että tällainenkin on näköjään olemassa.
+    - Harjoituskokeet (esim. MeasureUp) auttavat hahmottamaan, milloin olet valmis varsinaiseen testiin. Kun hankit vouchereita sertifiointi testiin, niin osta MeasureUp harjoitustesti kylkeen, mikä ei lisää hintaa montaa kymppiä ja voit harjoitustestillä kartoittaa valmiuttasi testiin ja huomaat mikäli jokin osa-alue on vielä vähän heikosti hallinnassa.
 
 Miten ikinä lopulta päätyykään kehittämään osaamistaan, niin tärkeintä varmasti on se, että sitä malttaa tehdä opiskelua jatkuvasti, eikä tuudittaudu pelkästään siihen, että työ opettaa tekijäänsä.
