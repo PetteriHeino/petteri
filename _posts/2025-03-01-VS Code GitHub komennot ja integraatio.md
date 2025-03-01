@@ -80,9 +80,39 @@ brew update && brew upgrade git
 
 Seuraavaksi asennetaan GitHub Pull Requests and Issues laajennus. Tämä löytyy Extensions: Marketplacesta (klikkaa vasemmassa laidassa olevaa ikonio missä on neljä neliötä joista yksi on erillään). Kirjoita hakukenttään GitHub, paikallista GitHub Pull Requests ja klikkaa install.
 
-### 4. Kirjaudu GitHubiin VS Codessa
+### 4. Kirjaudu GitHubiin VS Codessa ja autentikointi
 
 Editorin vasemmassa alakulmassa olevasta identiteetti kuvakkeesta kirjaudutaan GitHub Pull Requests... ja GitHub Copilotiin.
+
+#### SSH-autentikointi avaimen luominen ####
+
+Aja seuraava komento shellissä:
+
+```zsh
+ssh-keygen -t ed25519 -C "sähköpostisi@domain.com"
+```
+Korvaa sähköpostiosoitte GitHub tunnukseesi määritellyllä sähköpostiosoitteella.  
+Kun komentoa suoritetaan, niin voit painaa olla vastaamatta ja painaa enteriä kummassakin kysymyksessä jos olet tyytyväinen oletuspolkuun koneellasi ja et määritä salasanaa avaimelle.
+
+Aktivoidaan SSH-agentti:
+
+```zsh
+eval "$(ssh-agent -s)"
+```
+
+Lisää uusi SSH-avain agenttiin:
+```zsh
+ssh-add ~/.ssh/id_ed25519
+```
+
+Kopioi komennon tuottama koko hässäkkä GitHubiin oman tunnuksen asetuksiin SSH and GPG keys välilehdelle SSH keysiin.
+
+Testaa yhteys GitHubiin
+```zsh
+ssh -T git@github.com
+```
+Mikäli saat tämän henkisen vastauksen, niin yhteyden pitäisi olla kunnossa "You've successfully authenticated, but GitHub does not provide shell access." 
+
 
 ### 5. Luodaan GitHub repository ja paikallinen kansio, jotka liitetään toisiinsa
 

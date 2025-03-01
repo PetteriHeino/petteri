@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="fi"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="fi" /><updated>2025-03-01T14:34:07+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Petteri Heino</title><subtitle>Kotisivu ja blogi</subtitle><entry><title type="html">VS Code ja GitHub käyttöönotto ja työskentely repositoryissä</title><link href="http://localhost:4000/posts/VS-Code-GitHub-komennot-ja-integraatio/" rel="alternate" type="text/html" title="VS Code ja GitHub käyttöönotto ja työskentely repositoryissä" /><published>2025-03-01T12:00:00+02:00</published><updated>2025-03-01T12:00:00+02:00</updated><id>http://localhost:4000/posts/VS%20Code%20GitHub%20komennot%20ja%20integraatio</id><content type="html" xml:base="http://localhost:4000/posts/VS-Code-GitHub-komennot-ja-integraatio/"><![CDATA[<h1 id="johdanto">Johdanto</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="fi"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="fi" /><updated>2025-03-01T21:37:29+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Petteri Heino</title><subtitle>Kotisivu ja blogi</subtitle><entry><title type="html">VS Code ja GitHub käyttöönotto ja työskentely repositoryissä</title><link href="http://localhost:4000/posts/VS-Code-GitHub-komennot-ja-integraatio/" rel="alternate" type="text/html" title="VS Code ja GitHub käyttöönotto ja työskentely repositoryissä" /><published>2025-03-01T12:00:00+02:00</published><updated>2025-03-01T12:00:00+02:00</updated><id>http://localhost:4000/posts/VS%20Code%20GitHub%20komennot%20ja%20integraatio</id><content type="html" xml:base="http://localhost:4000/posts/VS-Code-GitHub-komennot-ja-integraatio/"><![CDATA[<h1 id="johdanto">Johdanto</h1>
 
 <p>Opiskelen MS Azuren hallinnointia sertifiointitavoitteisesti. Aloittaessani opiskelemaan Azure Administrator Associate testiin (AZ-104) tuumasin, että koska Windows pöytäkoneeni hajosi, niin asennan Macbook läppäriin VS Code editorin ajatuksena, että koitan alusta lähtien opetella ylläpitämään Azurea mahdollisimman vähän graafisessa käyttöliittymässä. Sen takia tässä kirjoituksessa on asiaa VS Coden ja GitHubin käyttöönotosta MacOsille. Samat asiat koskevat toki Windowsia, mutta ne voivat olla vähän erilaisia. En tässä kirjoituksessa ota kantaa Windows asennukseen. Kirjoituksen GitHub komennot ovat kuitenkin samat, ajaa niitä Macissä tai Windowsissa.</p>
 
@@ -74,9 +74,38 @@ Copilotilta voit</p>
 
 <p>Seuraavaksi asennetaan GitHub Pull Requests and Issues laajennus. Tämä löytyy Extensions: Marketplacesta (klikkaa vasemmassa laidassa olevaa ikonio missä on neljä neliötä joista yksi on erillään). Kirjoita hakukenttään GitHub, paikallista GitHub Pull Requests ja klikkaa install.</p>
 
-<h3 id="4-kirjaudu-githubiin-vs-codessa">4. Kirjaudu GitHubiin VS Codessa</h3>
+<h3 id="4-kirjaudu-githubiin-vs-codessa-ja-autentikointi">4. Kirjaudu GitHubiin VS Codessa ja autentikointi</h3>
 
 <p>Editorin vasemmassa alakulmassa olevasta identiteetti kuvakkeesta kirjaudutaan GitHub Pull Requests… ja GitHub Copilotiin.</p>
+
+<h4 id="ssh-autentikointi-avaimen-luominen">SSH-autentikointi avaimen luominen</h4>
+
+<p>Aja seuraava komento shellissä:</p>
+
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>ssh-keygen <span class="nt">-t</span> ed25519 <span class="nt">-C</span> <span class="s2">"sähköpostisi@domain.com"</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+<p>Korvaa sähköpostiosoitte GitHub tunnukseesi määritellyllä sähköpostiosoitteella.<br />
+Kun komentoa suoritetaan, niin voit painaa olla vastaamatta ja painaa enteriä kummassakin kysymyksessä jos olet tyytyväinen oletuspolkuun koneellasi ja et määritä salasanaa avaimelle.</p>
+
+<p>Aktivoidaan SSH-agentti:</p>
+
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">eval</span> <span class="s2">"</span><span class="si">$(</span>ssh-agent <span class="nt">-s</span><span class="si">)</span><span class="s2">"</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Lisää uusi SSH-avain agenttiin:</p>
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>ssh-add ~/.ssh/id_ed25519
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Kopioi komennon tuottama koko hässäkkä GitHubiin oman tunnuksen asetuksiin SSH and GPG keys välilehdelle SSH keysiin.</p>
+
+<p>Testaa yhteys GitHubiin</p>
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>ssh <span class="nt">-T</span> git@github.com
+</pre></td></tr></tbody></table></code></pre></div></div>
+<p>Mikäli saat tämän henkisen vastauksen, niin yhteyden pitäisi olla kunnossa “You’ve successfully authenticated, but GitHub does not provide shell access.”</p>
 
 <h3 id="5-luodaan-github-repository-ja-paikallinen-kansio-jotka-liitetään-toisiinsa">5. Luodaan GitHub repository ja paikallinen kansio, jotka liitetään toisiinsa</h3>
 
@@ -275,13 +304,13 @@ Commitoi kaikki muuttuneet ja trackatut tiedostot, <mark>ei lisää uusia tiedos
 <div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 </pre></td><td class="rouge-code"><pre>git push <span class="nt">-u</span> origin branchnimi
 </pre></td></tr></tbody></table></code></pre></div></div>
-<p>tämän jälkeen branchit ovat linkitetty toisiinsa.</p>]]></content><author><name></name></author><category term="Työvälineet" /><category term="VS Code" /><category term="GitHub" /><summary type="html"><![CDATA[Infrastucture As Code for dummies sarjan ensimmäinen kirjoitus. Käydään vähän komentoja läpi, että päästään alkuun VS Coden ja GitHubin kanssa.]]></summary></entry><entry><title type="html">Azure opiskelun aloittaminen ja sertifiointien merkitys työmarkkinoilla</title><link href="http://localhost:4000/posts/Azure_opiskelun_aloittaminen/" rel="alternate" type="text/html" title="Azure opiskelun aloittaminen ja sertifiointien merkitys työmarkkinoilla" /><published>2025-02-22T21:50:00+02:00</published><updated>2025-02-27T23:51:44+02:00</updated><id>http://localhost:4000/posts/Azure_opiskelun_aloittaminen</id><content type="html" xml:base="http://localhost:4000/posts/Azure_opiskelun_aloittaminen/"><![CDATA[<h1 id="johdanto">Johdanto</h1>
+<p>tämän jälkeen branchit ovat linkitetty toisiinsa.</p>]]></content><author><name></name></author><category term="Työvälineet" /><category term="VS Code" /><category term="GitHub" /><summary type="html"><![CDATA[Infrastucture As Code for dummies sarjan ensimmäinen kirjoitus. Käydään vähän komentoja läpi, että päästään alkuun VS Coden ja GitHubin kanssa.]]></summary></entry><entry><title type="html">Azure opiskelun aloittaminen ja sertifiointien merkitys työmarkkinoilla</title><link href="http://localhost:4000/posts/Azure_opiskelun_aloittaminen/" rel="alternate" type="text/html" title="Azure opiskelun aloittaminen ja sertifiointien merkitys työmarkkinoilla" /><published>2025-02-22T21:50:00+02:00</published><updated>2025-03-01T15:42:46+02:00</updated><id>http://localhost:4000/posts/Azure_opiskelun_aloittaminen</id><content type="html" xml:base="http://localhost:4000/posts/Azure_opiskelun_aloittaminen/"><![CDATA[<h1 id="johdanto">Johdanto</h1>
 
 <p>Pilvipalveluiden merkitys IT-alalla on kasvanut valtavasti viime vuosina, ja yhä useampi organisaatio siirtyy joko kokonaan tai osittain pilviympäristöihin. Microsoft Azure on yksi johtavista pilvipalvelualustoista, ja sen hallintaosaaminen on nykyään tärkeä taito IT-ammattilaisille.</p>
 
 <p>Lähestyn aihetta omasta kulmasta katsottuna. Olen ollut IT-alan infratehtävissä yli 20 vuotta, joista suurimman osan ajasta olen ollut kahden Suomen markkinassa ison palvelutarjoajan asiakasprojekteissa infra-asiantuntijana. Ala on tekniikan osalta jatkuvasti kehittyvä, mutta pilveistymisen myötä asiantuntijoilta vaadittava osaamisen määrä meni harppauksin eteenpäin ja vaikka on-premises (legacy) taitoja tarvitaan vielä pitkän aikaa, niin työmarkkinassa on-premises osaaminen on kokenut romahduksen.</p>
 
-<p>Maailman talous kyntää ja se näkyy yrityksien jatkuvina YT-neuvottelu kierroksina. Jos et vielä ole työtön työnhakija, niin pian saatat olla, jos et pidä huolta siitä, että pysyt kyvykkäänä ja hyödyllisenä yritykselle. Tästä kohtaa alkaa blogikirjoitukseni tarina. Parin YT-kierroksen jälkeen löysin itseni työttömyys uhan alta. Ansaitsemani palkka ei enää korreloinut siihen oikeuttavan osaamisprofiilin kanssa ja näin päädyin irtisanomisprosessiin. Onni onnettomuudessa on se, että minun kohdallani prosessi on aika pitkä ja siihen kuuluu kouluttautumisraha, joten nyt minulla on aikaa opiskella täyspäiväisesti ja voin käyttää koulutusrahaa sertifikaattitesteihin.</p>
+<p>Maailmantalous kyntää ja se näkyy yrityksien jatkuvina YT-neuvottelu kierroksina. Jos et vielä ole työtön työnhakija, niin pian saatat olla, jos et pidä huolta siitä, että pysyt kyvykkäänä ja hyödyllisenä yritykselle. Tästä kohtaa alkaa blogikirjoitukseni tarina. Parin YT-kierroksen jälkeen löysin itseni työttömyys uhan alta. Ansaitsemani palkka ei enää korreloinut siihen oikeuttavan osaamisprofiilin kanssa ja näin päädyin irtisanomisprosessiin. Onni onnettomuudessa on se, että minun kohdallani prosessi on aika pitkä ja siihen kuuluu kouluttautumisraha, joten nyt minulla on aikaa opiskella täyspäiväisesti ja voin käyttää koulutusrahaa sertifikaattitesteihin.</p>
 
 <p>Pilveistymisen alkaessa en pitänyt huolta siitä, että osaamiseni kehittyy sitä mukaa kuin maailma muuttuu alalla. Työtä oli yllin kyllin on-prem projekteissa, Exchange Hybrid rakentamista ja pilvisiirtymiä yms… Kunnes tultiin siihen vaiheeseen, että nämä hommat vähentyivät merkittävästi ja yhtäkkiä uutta opittavaa asiaa oli valtavat määrät.</p>
 
