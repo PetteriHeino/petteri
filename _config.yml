@@ -211,6 +211,9 @@ compress_html:
   ignore:
     envs: [development]
 
+include:
+  - "googlecbd32db5e9cd38fb.html"
+
 exclude:
   - "*.gem"
   - "*.gemspec"
