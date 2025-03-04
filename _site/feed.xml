@@ -1,4 +1,112 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="fi"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="fi" /><updated>2025-03-01T21:37:29+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Petteri Heino</title><subtitle>Kotisivu ja blogi</subtitle><entry><title type="html">VS Code ja GitHub käyttöönotto ja työskentely repositoryissä</title><link href="http://localhost:4000/posts/VS-Code-GitHub-komennot-ja-integraatio/" rel="alternate" type="text/html" title="VS Code ja GitHub käyttöönotto ja työskentely repositoryissä" /><published>2025-03-01T12:00:00+02:00</published><updated>2025-03-01T12:00:00+02:00</updated><id>http://localhost:4000/posts/VS%20Code%20GitHub%20komennot%20ja%20integraatio</id><content type="html" xml:base="http://localhost:4000/posts/VS-Code-GitHub-komennot-ja-integraatio/"><![CDATA[<h1 id="johdanto">Johdanto</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="fi"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="fi" /><updated>2025-03-04T09:18:30+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Petteri Heino</title><subtitle>Kotisivu ja blogi</subtitle><entry><title type="html">Teams ja ulkoiset käyttäjät</title><link href="http://localhost:4000/posts/teams_ulkoiset/" rel="alternate" type="text/html" title="Teams ja ulkoiset käyttäjät" /><published>2025-03-02T12:00:00+02:00</published><updated>2025-03-02T12:00:00+02:00</updated><id>http://localhost:4000/posts/teams_ulkoiset</id><content type="html" xml:base="http://localhost:4000/posts/teams_ulkoiset/"><![CDATA[<h2 id="johdanto">Johdanto</h2>
+
+<p>Kun aloittaa opiskelemaan Teamsiä sertifioinnin suorattamista ajatellen, eikä kokemusta Teams ylläpidosta ole entuudestaan, niin ulkoisten käyttäjien asetusten määrityksiin voi olla alkuun hankala saada otetta, kun on useampaa erilaista kollaboraatio tyyppiä ja asetuksia on M365n eri palveluissa.</p>
+
+<p>Kollaboraatio ulkoisten käyttäjien kanssa on aihealua, mitä sertifiointi testissä kysytään varmasti, niin ajattelin yhdistää nämä eri kollaboraatio asetukset yhteen dokumenttiin.</p>
+
+<h2 id="lyhyesti-koko-paletti">Lyhyesti koko paletti</h2>
+
+<ul>
+  <li>External Access
+    <ul>
+      <li>Tenantin käyttäjät voivat chatata ulkoisten käyttäjien kanssa</li>
+      <li>Ulkoisilla käyttäjillä ei ole pääsyä tenantin tiimeihin ja resursseihin</li>
+      <li>Asetukset: Teams hallintakeskus Users -&gt; External Access -&gt; Organization settings ja Policies</li>
+    </ul>
+  </li>
+  <li>Guest Access
+    <ul>
+      <li>vieraskäyttäjille voidaan antaa pääsy Teamsiin, kanavien dokumentteihin, chatiin ja sovelluksiin</li>
+      <li>Asetukset:
+        <ul>
+          <li>Entra ID -&gt; External collaboration settings</li>
+          <li>M365 admin center -&gt; Settings -&gt; M65 Groups</li>
+          <li>Sharepoint admin center -&gt; Policies -&gt; Sharing</li>
+          <li>Teams Admin Center -&gt; Users -&gt; Guest access</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>B2B Direct Connect ja Shared Channel
+    <ul>
+      <li>Luottosuhde tenantien välillä mahdollistaa shared channel käytön, missä kollaboraatioon ei tarvitse guest tunnusta ja näin ollen ulkoisen käyttäjän ei tarvitse kirjautua tenantiin, vaan hän käytää Teams kanavaa oman tenanttinsa tunnuksella.</li>
+      <li>Asetukset:
+        <ul>
+          <li>Entra ID -&gt;</li>
+          <li>Teams Admin Center -&gt;</li>
+          <li>Teams client -&gt;</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="shared-channel---b2b-luottosuhde-ja-teams-ryhmän-shared-channel">Shared Channel - B2B luottosuhde ja Teams ryhmän shared channel</h2>
+
+<h3 id="b2b-direct-connect-konfiguraatiot-entra-id">B2B direct connect konfiguraatiot (Entra ID)</h3>
+
+<h4 id="lisää-partner-tenant">Lisää partner tenant</h4>
+
+<p>To configure cross-tenant access settings in the Microsoft Entra admin center, you need an account with at least the Security Administrator role. Teams administrators can read cross-tenant access settings, but they can’t update these settings.</p>
+
+<p><img src="/crosstenant_access_settings.png" alt="Entra ID polku" /></p>
+
+<p>Sign in to the Microsoft Entra admin center as at least a Security Administrator.</p>
+
+<p>Browse to Identity &gt; External Identities &gt; Cross-tenant access settings.</p>
+
+<p>Select Organizational settings.</p>
+
+<p>Select Add organization.</p>
+
+<p>On the Add organization pane, type the full domain name (or tenant ID) for the organization.</p>
+
+<p><img src="/crosstenant_add_domain.png" alt="add domain" /></p>
+
+<p>Select the organization in the search results, and then select Add.</p>
+
+<p>The organization appears in the Organizational settings list. At this point, all access settings for this organization are inherited from your default settings. To change the settings for this organization, select the Inherited from default link under the Inbound access or Outbound access column.</p>
+
+<p><img src="/crosstenant_added_domain.png" alt="added domain" /></p>
+
+<h4 id="määritä-pääsyoikeudet">Määritä pääsyoikeudet</h4>
+
+<p>If you’re configuring settings for an organization, select one of these options:</p>
+
+<p>Default settings: The organization uses the settings configured on the Default settings tab. If customized settings were already configured for this organization, you need to select Yes to confirm that you want all settings to be replaced by the default settings. Then select Save, and skip the rest of the steps in this procedure.</p>
+
+<p>Customize settings: You can customize the settings to enforce for this organization instead of the default settings. Continue with the rest of the steps in this procedure.</p>
+
+<p>Select External users and groups.</p>
+
+<p>Under Access status, select one of these options:</p>
+
+<p>Allow access: Allows the users and groups specified under Applies to to access B2B direct connect.
+Block access: Blocks the users and groups specified under Applies to from accessing B2B direct connect. Blocking access for all external users and groups also blocks all your internal applications from being shared via B2B direct connect.</p>
+
+<p>If you chose Select external users and groups, do the following for each user or group you want to add:</p>
+
+<p>Select Add external users and groups.
+In the Add other users and groups pane, type the user object ID or the group object ID in the search box.
+In the menu next to the search box, choose either user or group.
+Select Add.</p>
+
+<p><img src="/custom_allow_access.png" alt="Allow access to groups or/and users" /></p>
+
+<p><img src="/custom_allow_access2.png" alt="Allow access to M365 application" /></p>
+
+<h4 id="partner-organisaation-luottosuhde---outbound-access">partner organisaation luottosuhde - outbound access</h4>
+
+<p>In the Microsoft Entra admin center, select External Identities, and then select Cross-tenant access settings.
+Select the outbound access link for the organization that you want to modify.
+On the B2B direct connect tab, choose Customize settings.
+On the External users and groups tab, choose Allow access and set an Applies to of all users.
+On the External applications tab, choose Allow access and Select external applications.
+Select Add Microsoft applications.
+Select the Office 365 application, and then choose Select.
+Select Save, choose Yes to confirm, and close the Outbound access settings blade.</p>
+
+<h3 id="teams-shared-channel-teams-hallintakonsoli-tai-teams-client">Teams shared channel (Teams hallintakonsoli tai Teams client)</h3>]]></content><author><name></name></author><category term="M365" /><category term="Teams" /><summary type="html"><![CDATA[Teams käyttöön vaikuttavat M365 tenantin yhteistyö asetukset ulkoisten käyttäjien kanssa ovat hujan hajan M365 palvelussa. Tässä kirjoituksessa pyrin niputtamaan nämä yhteen dokumenttiin ja käyn läpi niiden konfiguroinnin. Näitä asioita testataan vuoren varmasti MS-700 seritifiontitestissä.]]></summary></entry><entry><title type="html">VS Code ja GitHub käyttöönotto ja työskentely repositoryissä</title><link href="http://localhost:4000/posts/VS-Code-GitHub-komennot-ja-integraatio/" rel="alternate" type="text/html" title="VS Code ja GitHub käyttöönotto ja työskentely repositoryissä" /><published>2025-03-01T12:00:00+02:00</published><updated>2025-03-01T21:38:57+02:00</updated><id>http://localhost:4000/posts/VS%20Code%20GitHub%20komennot%20ja%20integraatio</id><content type="html" xml:base="http://localhost:4000/posts/VS-Code-GitHub-komennot-ja-integraatio/"><![CDATA[<h1 id="johdanto">Johdanto</h1>
 
 <p>Opiskelen MS Azuren hallinnointia sertifiointitavoitteisesti. Aloittaessani opiskelemaan Azure Administrator Associate testiin (AZ-104) tuumasin, että koska Windows pöytäkoneeni hajosi, niin asennan Macbook läppäriin VS Code editorin ajatuksena, että koitan alusta lähtien opetella ylläpitämään Azurea mahdollisimman vähän graafisessa käyttöliittymässä. Sen takia tässä kirjoituksessa on asiaa VS Coden ja GitHubin käyttöönotosta MacOsille. Samat asiat koskevat toki Windowsia, mutta ne voivat olla vähän erilaisia. En tässä kirjoituksessa ota kantaa Windows asennukseen. Kirjoituksen GitHub komennot ovat kuitenkin samat, ajaa niitä Macissä tai Windowsissa.</p>
 

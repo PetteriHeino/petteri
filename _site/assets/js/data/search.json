@@ -1,5 +1,13 @@
 [
   {
+    "title": "Teams ja ulkoiset käyttäjät",
+    "url": "/posts/teams_ulkoiset/",
+    "categories": "M365",
+    "tags": "Teams",
+    "date": "2025-03-02 12:00:00 +0200",
+    "content": "Teams käyttöön vaikuttavat M365 tenantin yhteistyö asetukset ulkoisten käyttäjien kanssa ovat hujan hajan M365 palvelussa. Tässä kirjoituksessa pyrin niputtamaan nämä yhteen dokumenttiin ja käyn lä..."
+  },
+  {
     "title": "VS Code ja GitHub käyttöönotto ja työskentely repositoryissä",
     "url": "/posts/VS-Code-GitHub-komennot-ja-integraatio/",
     "categories": "Työvälineet",
